@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #202731;
+}
+
+header {
+    background-color: #202731;
+    color: #fff;
+    padding:10px;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.noticia {
+    background-color: rgb(0, 0, 0);
+    padding: 1rem;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0px 10px rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+.noticia h2 {
+    margin-top: 0;
+    text-decoration: underline;
+}
+
+.noticia .date {
+    color: #ffffff;
+    font-size: 10px;
+}
+
+.noticia .content {
+    margin-top: 10px;
+    color: white;
+}
+
+.noticia .more-text {
+    display: none;
+    color: white;
+}
+
+.noticia .read-more {
+    background-color: #A56AFA;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.noticia .read-more:hover {
+    background-color: #202731;
+}
+h1{
+    background-color: #A56AFA;
+}
+
+
+.volt{
+    background-color: white;
+    color: black;
+    height: 50px;
+    text-align: center;
+}
+ a{
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover{
+    color: black;
+    text-shadow: 0 0 10px black;
+}
+
+
+/* Estilos para telas menores que 600px */
+@media screen and (max-width: 600px) {
+    main {
+        padding: 5px; /* Reduz o padding para economizar espaço */
+    }
+
+    .noticia {
+        padding: 0.5rem; /* Reduz o padding das notícias */
+    }
+
+    .noticia h2 {
+        font-size: 18px; /* Reduz o tamanho do título das notícias */
+    }
+
+    .noticia .date {
+        font-size: 8px; /* Reduz o tamanho da data */
+    }
+
+    .volt {
+        font-size: 14px; /* Reduz o tamanho do texto do link de volta */
+        height: auto; /* Ajusta a altura para o conteúdo */
+    }
+}

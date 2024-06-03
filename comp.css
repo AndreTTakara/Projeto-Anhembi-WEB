@@ -1,0 +1,488 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    display: flex;
+    padding: 20px 4%;
+    background-color: #202731 ;
+    margin: 0 auto;
+    
+    }
+    
+    .search-box{
+        padding: 2em;
+        
+        
+    }
+    
+    .search-txt{
+        border-radius: 15px;
+        border: none;
+        width: 1000px;
+        height:35px;
+        padding: 10px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    
+    }
+    
+    .search-txt::placeholder{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:  rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    background: url(/img/Vector.png) no-repeat;
+    background-position: 0.8em;
+
+
+    }
+    .lista-menu {
+        margin-top: 20px;
+        display: flex;
+        padding: 5px;
+    }
+    
+    .lista-menuitem {
+        list-style: none;
+        padding: 10px;
+        position: relative; /* Necessário para o submenu */
+    }
+    
+    .lista-menulink {
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        transition: 0.5s;
+    }
+    
+    .lista-menulink:hover {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 10px #A56AFA;
+    }
+    
+    .lista-menuitem:hover .submenu {
+        display: block;
+    }
+    
+    i {
+        font-size: 20px;
+        color: white;
+        margin: 0 10px 10px;
+    }
+    
+
+    
+  
+    .menu-baixo {
+        background: #A56AFA;
+        display: flex;
+        padding: 5px 4%;
+        margin: 0 auto;
+        height: 45px;
+    }
+    
+    .itens {
+        display: flex;
+        padding: 8px;
+    }
+    
+    .list {
+        margin: 0 50px;
+        list-style-type: none;
+        position: relative;
+    }
+    
+    .links {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .links:hover {
+        text-shadow: 0 0px 10px #f8fbff;
+    }
+    
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        list-style: none;
+       z-index: 1; /*Sobre poe objetos*/
+       text-decoration: none;
+       
+    }
+    
+    .has-submenu:hover .submenu {
+        display: block;
+    }
+    
+    .submenu-link {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 17px;
+        display: block;
+        margin: 5px 0;
+        transition: 0.5s;
+        text-decoration: underline;
+        padding: 5px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .submenu-link:hover {
+        text-shadow: 0 0px 10px #A56AFA;
+    }
+    
+/* Corpo Pagina */
+.corpo{
+    border-radius: 10px;
+    margin-top: 75px;
+    margin-left: 480px;
+    align-items: center;
+    width: 50%;
+    height: 900px;
+ 
+    background: #202731;
+   border: 1px solid white;
+    text-align: center;
+    
+}
+
+
+.game-imagem img{
+   
+     margin-top: 30px;
+}
+
+
+.swiper-slide img{
+width: 100%;
+height: 100%;
+}
+
+.titulo{
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 30px ;
+    margin: 10px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.estrelas{
+    margin-top: 20px;
+
+}
+
+.links-games{
+    list-style: none;
+    display: flex;
+    padding-left: 30%;
+    text-align: center;
+    margin-top: 30px;
+    
+}
+.descri{
+    padding: 16px;
+    color: #A56AFA;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+
+.descri:hover{
+    text-shadow: 0 0 10px #A56AFA;
+    color: rgb(0, 0, 0);
+}
+.lista-game{
+   border-radius: 10px;
+    border: 1px solid white ;
+  background: #f5f4f5;
+}
+
+.bandai{
+    margin: 15px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.preco{
+    font-weight: 700;
+    margin-top: 10px;
+}
+.dindin{
+    color: white;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+
+.links-finais{
+    margin-top: 20px;
+
+}
+.links-finais li{
+    list-style: none;
+}
+
+.info{
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #202731;
+    
+    border-radius: 10px;
+}
+.jogo{
+    padding: 10px;
+}
+
+.titulo-game{
+    text-shadow: 0 0 2px #ceacff;
+
+    text-align: center;
+    font-size: 22px;
+     font-weight: 400;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    color: white;
+    color: rgb(250, 92, 0);
+
+}
+
+.text-jogo{
+    color: white;
+    font-size: 18px;
+    padding: 20px 0 0 20px;  
+    text-shadow: 0 0 2px #A56AFA;
+}
+
+.text-jogo2{
+
+    color: rgb(250, 92, 0);
+    font-size: 18px;
+    padding: 20px 0 0 20px;  
+    text-shadow: 0 0 2px #ceacff;
+}
+
+
+.img-jogo{  
+    margin-top: 10px;
+    border-radius: 20px;
+   margin-left: 20px;
+   width: 700px;
+ background: white;
+ height: 400px;
+}
+
+
+/* corpo final */
+.requisitos-sistema
+{
+    display: flex;
+    color: white;
+}
+
+.titulo-requisitos{
+    color: rgb(250, 92, 0);
+    font-size: 22px;
+    font-weight: 700;
+    padding: 20px 0 0 20px;  
+    text-shadow: 0 0 2px #ceacff;
+}
+
+.minimos{
+    padding-top: 20px;
+    padding: 20px 0 50px 50px;
+    position: absolute;
+    color: rgb(250, 92, 0);
+    text-shadow: 0 0 2px #ceacff;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.recomend{
+    padding: 20px;
+    padding: 20px 0 0 795px;
+    position: absolute;
+    color: rgb(250, 92, 0);
+    text-shadow: 0 0 2px #ceacff;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.caract{
+    position: relative;
+ padding: 50px;
+}
+
+.requisitos{
+    color: rgb(250, 92, 0);
+    text-shadow: 0 0 2px #ceacff;
+    font-size: 18px;
+}
+
+
+
+footer{
+    margin-top: 10px;
+    background-color:#202731;
+color: white;
+    /*background-color:rgb(0, 8, 15);*/
+width: 100%;
+padding:50px 15%;
+    display: flex;
+    
+}
+footer div{
+    text-align: center;
+}
+
+.col-2{
+    flex-grow: 2;
+}
+
+footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+  
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-top: 18px;
+
+    font-family: cursive;
+
+}
+
+
+
+.col-2 form input{
+    width: 300px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+border: none;
+
+}
+
+form button{
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 10px 30px ;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
+.fim{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+ 
+
+
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    .search-txt {
+        width: 80%;
+    }
+
+    .corpo {
+        width: 90%;
+    }
+
+    .img-jogo {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-txt {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .lista-menu {
+        flex-direction: column;
+    }
+
+    .itens {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list {
+        margin: 10px 0;
+    }
+
+    .links-games {
+        flex-direction: column;
+    }
+
+    .requisitos-sistema {
+        flex-direction: column;
+    }
+
+    .minimos, .recomend {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .menu-baixo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-txt {
+        width: 90%;
+    }
+
+    .corpo {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+}

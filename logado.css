@@ -1,0 +1,580 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Jacquard+12&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+/*     
+     background-image: linear-gradient(rgb(156, 156, 156), rgba(202, 153, 248, 0.993)
+    );  */
+ background: rgb(226, 226, 226);
+
+}
+
+ header{
+    display: flex;
+    padding: 20px 4%;
+    background-color: #202731 ;
+    margin: 0 auto;
+    
+    }
+    
+    .search-box{
+        padding: 2em;
+        
+        
+    }
+    
+    .search-txt{
+        border-radius: 15px;
+        border: none;
+        width: 1000px;
+        height:35px;
+        padding: 10px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    
+    }
+    
+    .search-txt::placeholder{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:  rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    background: url(/img/Vector.png) no-repeat;
+    background-position: 0.8em;
+
+
+    }
+    .lista-menu {
+        margin-top: 20px;
+        display: flex;
+        padding: 5px;
+    }
+    
+    .lista-menuitem {
+        list-style: none;
+        padding: 10px;
+        position: relative; /* Necessário para o submenu */
+    }
+    
+    .lista-menulink {
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        transition: 0.5s;
+    }
+    
+    .lista-menulink:hover {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 10px #A56AFA;
+    }
+    
+    .lista-menuitem:hover .submenu {
+        display: block;
+    }
+    
+    i {
+        font-size: 20px;
+        color: white;
+        margin: 0 10px 10px;
+    }
+    
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        padding: 10px 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .submenu-item {
+        list-style: none;
+        padding: 5px 10px;
+    }
+    
+    .submenu-link {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+    
+    .submenu-link:hover {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 5px #A56AFA;
+    }
+
+    
+  
+    .menu-baixo {
+        background: #A56AFA;
+        display: flex;
+        padding: 5px 4%;
+        margin: 0 auto;
+        height: 45px;
+    }
+    
+    .itens {
+        display: flex;
+        padding: 8px;
+    }
+    
+    .list {
+        margin: 0 50px;
+        list-style-type: none;
+        position: relative;
+    }
+    
+    .links {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .links:hover {
+        text-shadow: 0 0px 10px #f8fbff;
+    }
+    
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        list-style: none;
+       z-index: 1; /*Sobre poe objetos*/
+       
+       
+    }
+    
+    .has-submenu:hover .submenu {
+        display: block;
+    }
+    
+    .submenu-link {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 17px;
+        display: block;
+        margin: 5px 0;
+        transition: 0.5s;
+       
+        padding: 5px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .submenu-link:hover {
+        color: rgb(0, 0, 0);
+        text-shadow: 0 0px 10px #A56AFA;
+    }
+    
+     /* fim header */
+
+
+    .container {
+display: flex;
+justify-content: space-between;
+gap: 20px;
+
+}
+    .slider {
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 1000px;
+        height: 400px;
+        overflow: hidden;
+   
+        box-shadow: 2px  2px 10px 10px  rgb(2, 0, 0);
+    }
+    .slides {
+        width: 400%;
+        height: 400px;
+        display: flex;
+    }
+    .slides input {
+        display: none;
+    }
+    .slide {
+        width: 25%;
+        position: relative;
+    }
+    .slide img{
+        width: 100%;
+    }
+
+    .manual-navigation {
+        position: absolute;
+        
+        width: 800px;
+        margin-top: -40px;
+        padding-left:200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .manual-btn {
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 10px;
+        cursor:pointer;
+    }
+
+    .manual-btn:not(:last-child) {
+        margin-right: 40px;
+
+    }
+    
+    .manual-btn:hover {
+        background-color: white;
+    }
+    
+    #radio1:checked ~ .first {
+        margin-left: 0;
+    }
+
+    #radio2:checked ~ .first {
+        margin-left: -25%;
+    }
+    #radio3:checked ~ .first {
+        margin-left: -50%;
+    }
+    #radio4:checked ~ .first {
+        margin-left: -75%;
+    }
+
+    .navigation-auto div{
+        border: none;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .navigation-auto{
+        position: absolute;
+        width: 800px;
+        margin-top: 360px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigation-auto div:not(:last-child){
+        margin-right: 40px;;
+    }
+
+     
+     /* Corpo-destaq */
+     
+    .corpo-destaq{
+        background-color: #ffffff;
+        width: 100%;
+        height: 840px;
+      
+    }
+
+
+    a:hover{
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0px 5px  #000000;
+        transform: scale(1.10);
+    
+        }
+    h1 {
+       
+        color: rgb(0, 0, 0);
+        margin-top: 20px;
+        font-size: 35px;
+        padding-left: 140px;
+        padding-top: 40px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        
+    }
+    .jogo1 a {
+        margin-top: -90px;
+        position: absolute;
+        left: -1%;
+        width: 50px;
+        padding: 150px;
+        transition: 1s;
+    }
+
+    .jogo2 a {
+        margin-top: -90px;
+        position: absolute;
+        left: 31%;
+        width: 50px;
+        padding: 150px;
+        transition: 1s;
+    }
+
+    .jogo3 a {
+        margin-top: -90px;
+        position: absolute;
+        left: 63%;
+        width: 50px;
+        padding: 150px;
+        transition: 1s;
+    }
+
+
+    
+  
+       /* Lista promo */
+    .lista_jogo {
+        width: 100%;
+        height: 200px;
+        background-color: #202731;
+        position: absolute;
+        top: 1500px;
+
+    }
+
+    .lista1 {
+        
+        display: flex;
+        margin-top: 15px;
+    }
+    .list1 a {
+     
+        left: 2.5%;
+        position: absolute;
+        transition: 1s;
+    }
+    .list2 a {
+        left: 22.5%;
+        position: absolute; 
+        transition: 1s;
+        
+    }
+    .list3 a {
+        left: 42.5%;
+        position: absolute;
+        transition: 1s; 
+    }
+    .list4 a {
+        left: 62.5%;
+        position: absolute;
+        transition: 1s; 
+    }
+    .list5 a {
+        left: 82.5%;
+        position: absolute; 
+        transition: 1s;
+    }
+
+
+  /* fim lista promo */
+
+/* Card */
+.game1{
+    border: 1px solid white;
+    background-color: #202731;
+    margin-top: 320px;
+    border-radius: 10px ;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.titulo-destaque{
+    color: white;
+    font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-shadow: 0 0 2px white;
+}
+
+.card {
+    background-color:#000000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.card h2 {
+    margin: 20px 0 10px;
+    font-size: 1.5em;
+    color: white;
+   font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+.card span{
+    color: rgb(255, 255, 0);
+    text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+.card p {
+   
+    margin-bottom: 20px;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 18px;
+   text-transform: uppercase;
+   text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+/* fim card */
+
+
+.final{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color:#202731 ;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.link__final a{
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+ 
+}
+
+.link__final a:hover{
+    color: #ffffff;
+    transition: 0.5s;
+    text-shadow: 0 0 5px white;
+
+}
+
+footer{
+    background-color:#202731;
+color: white;
+    /*background-color:rgb(0, 8, 15);*/
+width: 100%;
+padding:50px 15%;
+    display: flex;
+    
+}
+footer div{
+    text-align: center;
+}
+
+.col-2{
+    flex-grow: 2;
+}
+
+footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+  
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-top: 18px;
+
+    font-family: cursive;
+
+}
+
+
+
+.col-2 form input{
+    width: 300px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+border: none;
+
+}
+
+form button{
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 10px 30px ;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
+.fim{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+.fim{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+ 
+
+ 
+    .jumpscare {
+        position: absolute;
+        left: -2%;
+        top: 400px;
+    }
+

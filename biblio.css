@@ -1,0 +1,201 @@
+/* Resetando estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background: #202731;
+    color: #fff;
+}
+
+/* Estilização da barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #A56AFA;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #202731;
+    border-radius: 5px;
+}
+
+/* Estilização das seções principais */
+main {
+    padding: 20px 30px;
+}
+
+/* Seção de jogos em destaque */
+.featured h2, .library h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+.featured-games {
+    display: flex;
+    gap: 20px;
+}
+
+.featured-games .game {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    width: calc(50% - 10px);
+}
+
+.featured-games .game img {
+    width: 100%;
+    height: auto;
+}
+
+.featured-games .game h3 {
+    padding: 10px;
+}
+
+/* Seção da biblioteca de jogos */
+.library {
+    margin-top: 40px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.games-grid .game {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.games-grid .game img {
+    width: 100%;
+    height: auto;
+}
+
+.games-grid .game h3 {
+    padding: 10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px 20px;
+    }
+
+    .featured h2, .library h2 {
+        font-size: 1.6em;
+    }
+
+    .featured-games .game {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar .logo {
+        font-size: 1.2em;
+    }
+
+    .navbar .nav-links a {
+        padding: 5px;
+    }
+
+    .featured h2, .library h2 {
+        font-size: 1.4em;
+    }
+
+    .featured-games .game h3, .games-grid .game h3 {
+        font-size: 1em;
+    }
+
+    .games-grid {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar .logo {
+        font-size: 1em;
+    }
+
+    .navbar .nav-links li {
+        margin: 5px 0;
+    }
+
+    .navbar .nav-links a {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+
+    .featured h2, .library h2 {
+        font-size: 1.2em;
+    }
+
+    .featured-games .game h3, .games-grid .game h3 {
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 10px 15px;
+    }
+
+    .games-grid {
+        gap: 10px;
+    }
+}
