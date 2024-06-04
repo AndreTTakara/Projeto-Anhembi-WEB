@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html ng-app="carrinhoApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="carrinho.css">
+    <script src="angular.js"></script>
+    <script src="carrinho.js"></script>
+    <title>Carrinho</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c971813ea1.js" crossorigin="anonymous"></script> 
+
+</head>
+<body>
+    
+<!-- O header começa aqui :D-->
+<header class="header">
+    <div class="interface">
+      <!-- Logo -->
+      <a href="logado.html">
+          <img src="img/logo.png" alt="" height="90px">
+      </a>
+    </div>
+
+    <div class="search-box">
+     <a href=""></a><input type="text" class="search-txt" placeholder="Procure aqui seus jogos">
+     
+          
+     </div>
+
+     <nav class="menu">
+        <ul class="lista-menu">
+            <li class="lista-menuitem">
+                <i class="fa-solid fa-wallet"></i> 
+                <a href="" class="lista-menulink">Saldo</a>
+            </li>
+            <li class="lista-menuitem">
+                <i class="fa-solid fa-user"></i> 
+                <a href="" class="lista-menulink">Minha Conta</a>
+                <ul class="submenu">
+                    <li class="submenu-item"><a href="meusdados.html" class="submenu-link">Meus Dados</a></li>
+
+                    <li class="submenu-item"><a href="login.html" class="submenu-link">Sair</a></li>
+                </ul>
+            </li>
+            <li class="lista-menuitem">
+                <i class="fa-solid fa-cart-shopping"></i> 
+                <a href="carrinho.html" class="lista-menulink">Meu Carrinho</a>
+            </li>
+        </ul>
+    </nav>
+
+
+  </header>
+
+      
+      <!-- SubMenus -->
+      <section class="menu-baixo">
+        <ul class="itens">
+            <li class="list">
+                <a href="logado.html" class="links">Inicio</a>
+            </li>
+            <li class="list has-submenu">
+                <a href="biblio.html" class="links">Biblioteca</a>
+                <ul class="submenu">
+                    <li><a href="biblio.html" class="submenu-link">Minha Biblioteca</a></li>
+                  
+                </ul>
+            </li>
+            <li class="list has-submenu">
+                <a href="categ.html" class="links">Categorias</a>
+                <ul class="submenu">
+                    <li><a href="categ.html" class="submenu-link">Ação</a></li>
+                    <li><a href="categ.html" class="submenu-link">Aventura</a></li>
+                    <li><a href="categ.html" class="submenu-link">Estratégia</a></li>
+                    <li><a href="categ.html" class="submenu-link">Anime</a></li>
+
+                </ul>
+            </li>
+            <li class="list">
+                <a href="noti.html" class="links">Notícias</a>
+            </li>
+           
+        </ul>
+    </section>
+    
+    
+<!-- O header vai até aqui-->
+
+<div class="carrinho">
+    <div ng-controller = 'CarrinhoController'> 
+        <h1 id="carrinho">Carrinho de compras</h1> <br> 
+        <div ng-repeat="item in items">
+            <img src = {{item.imagem}} width="200px">
+            <div class="information">
+                <h4>{{item.nome}}</h4> <br>
+                <p>{{item.preco| currency}}</p>
+                <button ng-click="remove($index)" id="botao">Remover Item</button>
+            </div>
+            <br><hr><br>
+        </div>  
+    </div>  
+</div>
+
+    <div class="comprar">
+    <div ng-controller = 'CarrinhoController'> 
+        <h6 id="output">Total estimado:</h6>
+        <a href="biblio.html">
+        <input onclick="alert('Compra realizada com sucesso! Agradecemos pela sua compra! (´・ω・`)')" type="submit" value="comprar">
+        </a>
+    </div>
+    </div>
+

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Jacquard+12&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+/*     
+     background-image: linear-gradient(rgb(156, 156, 156), rgba(202, 153, 248, 0.993)
+    );  */
+ background: rgb(226, 226, 226);
+
+}
+
+ header{
+    display: flex;
+    padding: 20px 4%;
+    background-color: #202731 ;
+    margin: 0 auto;
+    
+    }
+    
+    .search-box{
+        padding: 2em;
+        
+        
+    }
+    
+    .search-txt{
+        border-radius: 15px;
+        border: none;
+        width: 1000px;
+        height:35px;
+        padding: 10px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    
+    }
+    
+    .search-txt::placeholder{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:  rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    background: url(/img/Vector.png) no-repeat;
+    background-position: 0.8em;
+
+
+    }
+    .lista-menu {
+        display: flex;
+        padding: 30px;
+    }
+    
+    .lista-menuitem {
+        list-style: none;
+        padding: 10px;
+        position: relative; /* NecessÃ¡rio para o submenu */
+    }
+    
+    .lista-menulink {
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        transition: 0.5s;
+    }
+    
+    .lista-menulink:hover {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 10px #A56AFA;
+    }
+    
+    .lista-menuitem:hover .submenu {
+        display: block;
+    }
+    
+    i {
+        font-size: 20px;
+        color: white;
+        margin: 0 10px 10px;
+    }
+    
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        padding: 10px 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .submenu-item {
+        list-style: none;
+        padding: 5px 10px;
+    }
+    
+    .submenu-link {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+    
+    .submenu-link:hover {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 5px #A56AFA;
+    }
+
+    
+  
+    .menu-baixo {
+        background: #A56AFA;
+        display: flex;
+        padding: 5px 4%;
+        margin: 0 auto;
+        height: 45px;
+    }
+    
+    .itens {
+        display: flex;
+        padding: 8px;
+    }
+    
+    .list {
+        margin: 0 50px;
+        list-style-type: none;
+        position: relative;
+    }
+    
+    .links {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .links:hover {
+        text-shadow: 0 0px 10px #f8fbff;
+    }
+    
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        list-style: none;
+       z-index: 1; /*Sobre poe objetos*/
+       
+       
+    }
+    
+    .has-submenu:hover .submenu {
+        display: block;
+    }
+    
+    .submenu-link {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 17px;
+        display: block;
+        margin: 5px 0;
+        transition: 0.5s;
+       
+        padding: 5px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .submenu-link:hover {
+        color: rgb(255, 230, 0);
+        text-shadow: 0 0px 10px #000000;
+    }
+
+    h1 {
+        font-size: 40px;
+        color: white;
+    }
+
+    .carrinho {
+        color: white;
+        text-align: center;
+        border: 10px solid #682974;
+        width: 800px;
+        position: absolute;
+        left: 150px;
+        top: 225px;
+        background-color: #333;
+    }
+  
+    .comprar {
+
+        color: white;
+        position: absolute;
+        background-color: #333;
+        border: 50px solid #333;
+        top: 350px;
+        right: 150px;
+    }
+    h6 {
+        font-size: 25px;
+    }
+
+    input[type="submit"] {
+        width: 450px;
+        padding: 15px 30px;
+        font-size: 24px;
+        background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+        border-radius: 50px;
+        cursor: pointer;
+        color: white;
+        transition: 1.5s;
+    }
+
+    input[type="submit"]:hover {
+        background-image: radial-gradient(circle, #00d4ff 0%, #5c0067 100%);
+        color: white;
+    }
+    hr {
+        border: 10px solid #682974;
+    }
